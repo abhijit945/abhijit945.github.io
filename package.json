@@ -16,6 +16,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.5.3",
     "@material-ui/core": "^4.3.3",
+    "@material-ui/icons": "^4.2.1",
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
     "babel-plugin-istanbul": "^5.1.3",
@@ -24,6 +25,15 @@
     "babelify": "10.0.0",
     "browserify": "16.5.0",
     "css-loader": "^2.1.1",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "watchify": "3.11.1"
+  },
+  "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-config-prettier": "^4.3.0",
@@ -33,14 +43,7 @@
     "eslint-plugin-material-ui": "^1.0.1",
     "eslint-plugin-react": "^7.14.2",
     "eslint-plugin-react-hooks": "^1.6.1",
-    "less": "^3.9.0",
-    "less-loader": "^5.0.0",
-    "prettier": "^1.17.1",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "style-loader": "^0.23.1",
-    "url-loader": "^1.1.2",
-    "watchify": "3.11.1"
+    "prettier": "^1.17.1"
   },
   "homepage": "https://github.com/abhijit945/abhijit945.github.io",
   "keywords": [
