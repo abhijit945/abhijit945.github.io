@@ -4,11 +4,11 @@ import { ThemeProvider } from "@material-ui/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import MainPage from "./components/MainPage";
 import BackToTop from "./components/BackToTop";
-import theme from "./components/themeHelper";
+import theme from "./helpers/themeHelper";
 
 function App() {
   return (
-    <ThemeProvider muiTheme={theme}>
+    <ThemeProvider theme={theme}>
       <React.Fragment>
         <BackToTop />
         <CssBaseline />

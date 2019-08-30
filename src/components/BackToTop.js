@@ -6,8 +6,6 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
-import Box from "@material-ui/core/Box";
-import Container from "@material-ui/core/Container";
 import Fab from "@material-ui/core/Fab";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import Zoom from "@material-ui/core/Zoom";
@@ -18,6 +16,11 @@ const useStyles = makeStyles(theme => ({
     position: "fixed",
     bottom: theme.spacing(2),
     right: theme.spacing(2)
+  },
+  bar: {
+    display: "flex",
+    alignContent: "center",
+    justifyContent: "space-between"
   }
 }));
 
@@ -51,11 +54,12 @@ ScrollTop.propTypes = {
 };
 
 export default function BackToTop(props) {
+  const classes = useStyles();
   return (
     <React.Fragment>
       <CssBaseline />
       <AppBar>
-        <Toolbar>
+        <Toolbar className={classes.bar}>
           <Typography variant="h6">Abhijit Rao</Typography>
           <Avatar />
         </Toolbar>
