@@ -7,6 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Fab from "@material-ui/core/Fab";
+import Box from "@material-ui/core/Box";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import Zoom from "@material-ui/core/Zoom";
 import Avatar from "./Avatar";
@@ -17,10 +18,15 @@ const useStyles = makeStyles(theme => ({
     bottom: theme.spacing(2),
     right: theme.spacing(2)
   },
+  headerText: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
+  },
   bar: {
     display: "flex",
     alignContent: "center",
-    justifyContent: "space-between"
+    justifyContent: "center"
   }
 }));
 
@@ -60,7 +66,6 @@ export default function BackToTop(props) {
       <CssBaseline />
       <AppBar>
         <Toolbar className={classes.bar}>
-          <Typography variant="h6">Abhijit Rao</Typography>
           <Avatar />
         </Toolbar>
       </AppBar>

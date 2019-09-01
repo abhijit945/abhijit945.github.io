@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { ThemeProvider } from "@material-ui/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import MainPage from "./components/MainPage";
+import TabComponent from "./components/TabComponent";
 import BackToTop from "./components/BackToTop";
 import theme from "./helpers/themeHelper";
 
@@ -12,7 +12,7 @@ function App() {
       <React.Fragment>
         <BackToTop />
         <CssBaseline />
-        <MainPage />
+        <TabComponent />
       </React.Fragment>
     </ThemeProvider>
   );
