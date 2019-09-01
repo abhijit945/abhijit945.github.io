@@ -10,11 +10,20 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     maxWidth: "100vw",
-    marginTop: theme.spacing(11),
-    backgroundColor: theme.palette.background.paper
+    marginTop: theme.spacing(11)
   },
   tab: {
     textTransform: "none"
+  },
+  indicator: {
+    display: "flex",
+    justifyContent: "center",
+    backgroundColor: "transparent",
+    "& > div": {
+      maxWidth: theme.spacing(15),
+      width: "100%",
+      backgroundColor: theme.palette.secondary.main
+    }
   },
   tabLabel: {
     display: "flex",
@@ -38,7 +47,9 @@ export default function TabComponent() {
   return (
     <Box className={classes.root}>
       <Tabs
+        TabIndicatorProps={{ children: <div /> }}
         value={value}
+        classes={{ indicator: classes.indicator }}
         onChange={handleChange}
         variant="fullWidth"
         centered
