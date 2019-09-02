@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import { HashRouter, Route, Link, Switch } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
@@ -53,14 +53,14 @@ export default function TabComponent() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Route
         path="/"
-        render={() => (
+        render={({location}) => (
           <Box className={classes.root}>
             <Tabs
               TabIndicatorProps={{ children: <div /> }}
-              value={value}
+              value={location.pathname}
               classes={{ indicator: classes.indicator }}
               onChange={handleChange}
               variant="fullWidth"
@@ -91,14 +91,14 @@ export default function TabComponent() {
                 <Route
                   key={t.display}
                   path={t.route}
-                  render={({ location }) => (
+                  render={(hash) => (
                     <TabPanel
-                      value={location.pathname}
-                      key={location.pathname}
-                      index={location.pathname}
+                      value={hash.location.pathname}
+                      key={hash.location.pathname}
+                      index={hash.location.pathname}
                     >
                       {getContents()[
-                        getIndex(location.pathname, getContents())
+                        getIndex(hash.location.pathname, getContents())
                       ].content()}
                     </TabPanel>
                   )}
@@ -108,6 +108,6 @@ export default function TabComponent() {
           </Box>
         )}
       />
-    </BrowserRouter>
+    </HashRouter>
   );
 }

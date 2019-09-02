@@ -11,9 +11,9 @@ export default function ResumePage() {
     <Box p={3}>
       <Experience />
       <Accomplishments />
+      <Skills />
       <Education />
       <References />
-      <Skills />
     </Box>
   );
 }
