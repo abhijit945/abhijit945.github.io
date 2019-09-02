@@ -1,15 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Fab from "@material-ui/core/Fab";
-import Box from "@material-ui/core/Box";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import Zoom from "@material-ui/core/Zoom";
-import Avatar from "./Avatar";
+import Header from "./Header";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -20,11 +17,6 @@ const useStyles = makeStyles(theme => ({
   headerText: {
     display: "flex",
     alignItems: "center",
-    justifyContent: "center"
-  },
-  bar: {
-    display: "flex",
-    alignContent: "center",
     justifyContent: "center"
   }
 }));
@@ -59,14 +51,9 @@ ScrollTop.propTypes = {
 };
 
 export default function BackToTop(props) {
-  const classes = useStyles();
   return (
     <React.Fragment>
-      <AppBar>
-        <Toolbar className={classes.bar}>
-          <Avatar />
-        </Toolbar>
-      </AppBar>
+      <Header />
       <Toolbar id="back-to-top-anchor" />
       <ScrollTop {...props}>
         <Fab color="secondary" size="small" aria-label="scroll back to top">

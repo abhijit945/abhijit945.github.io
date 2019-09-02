@@ -13,7 +13,6 @@ const useStyles = makeStyles(theme => ({
 export default function TabPanel(props) {
   const classes = useStyles();
   const { children, value, index, ...other } = props;
-
   return (
     <Typography
       className={classes.root}
@@ -31,8 +30,8 @@ export default function TabPanel(props) {
 
 TabPanel.propTypes = {
   children: PropTypes.func.isRequired,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired
+  index: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired
 };
 
 export const a11yProps = index => {

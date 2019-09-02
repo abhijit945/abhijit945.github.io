@@ -5,7 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Chip from "@material-ui/core/Chip";
 import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
-import HttpIcon from "@material-ui/icons/Http";
+import LanguageIcon from '@material-ui/icons/Language';
 import GitHubIcon from "./GitHubIcon";
 import LinkedInIcon from "./LinkedInIcon";
 
@@ -18,7 +18,8 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "center"
   },
   chipRoot: {
-    margin: theme.spacing(1)
+    margin: theme.spacing(1),
+    fontWeight: theme.typography.fontWeightRegular
   }
 }));
 
@@ -26,7 +27,7 @@ const getChip = (classes, avatar, link, label) => {
   return (
     <Chip
       className={classes.chipRoot}
-      color="primary"
+      color="secondary"
       icon={avatar}
       variant="outlined"
       component="a"
@@ -41,6 +42,14 @@ export default function Contacts() {
   return (
     <Card>
       <CardContent className={classes.cardRoot}>
+        <Typography
+          variant="h5"
+          component="h2"
+          color="textSecondary"
+          gutterBottom
+        >
+          Contact
+        </Typography>
         {getChip(
           classes,
           <AlternateEmailIcon />,
@@ -49,7 +58,7 @@ export default function Contacts() {
         )}
         {getChip(
           classes,
-          <HttpIcon />,
+          <LanguageIcon />,
           "https://abhijit945.github.io",
           "https://abhijit945.github.io"
         )}
