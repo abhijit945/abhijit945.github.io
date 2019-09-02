@@ -14,3 +14,4 @@ My personal portfolio website hosted on Github Pages.
 - [ ] Add shadow to avatar
 - [ ] Reduce the size for selection in tabs
 - [ ] Add cards for all contents
+- [ ] For smaller screen reduce the contacts to small avatars
