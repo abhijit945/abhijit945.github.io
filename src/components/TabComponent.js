@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { HashRouter, Route, Link, Switch } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Tabs from "@material-ui/core/Tabs";
@@ -46,23 +46,17 @@ const useStyles = makeStyles(theme => ({
 
 export default function TabComponent() {
   const classes = useStyles();
-  const [value, setValue] = useState("/");
-
-  function handleChange(event, newValue) {
-    setValue(newValue);
-  }
 
   return (
     <HashRouter>
       <Route
         path="/"
-        render={({location}) => (
+        render={({ location }) => (
           <Box className={classes.root}>
             <Tabs
               TabIndicatorProps={{ children: <div /> }}
               value={location.pathname}
               classes={{ indicator: classes.indicator }}
-              onChange={handleChange}
               variant="fullWidth"
               centered
               indicatorColor="secondary"
@@ -91,7 +85,7 @@ export default function TabComponent() {
                 <Route
                   key={t.display}
                   path={t.route}
-                  render={(hash) => (
+                  render={hash => (
                     <TabPanel
                       value={hash.location.pathname}
                       key={hash.location.pathname}
