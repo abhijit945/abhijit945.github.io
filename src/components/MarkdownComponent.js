@@ -29,7 +29,7 @@ export default function MarkdownComponent(props) {
           dangerouslySetInnerHTML={{
             __html: marked(DOMPurify.sanitize(markdownContent))
           }}
-        ></Typography>
+         />
       </CardContent>
     </Card>
   );

@@ -7,10 +7,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Chip from "@material-ui/core/Chip";
 import Box from "@material-ui/core/Box";
 import Avatar from "@material-ui/core/Avatar";
-import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
-import LanguageIcon from "@material-ui/icons/Language";
-import GitHubIcon from "./GitHubIcon";
-import LinkedInIcon from "./LinkedInIcon";
+import getAvatarList from "../helpers/avatarList";
 
 const useStyles = makeStyles(theme => ({
   boxRoot: {
@@ -18,7 +15,9 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "center"
   },
   cardRoot: {
-    padding: theme.spacing(3),
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
+    minWidth: 275,
     display: "flex",
     flexDirection: "row",
     [theme.breakpoints.up("sm")]: {
@@ -84,32 +83,7 @@ export default function Contacts() {
           >
             Contact
           </Typography>
-          {[
-            getChip(
-              classes,
-              <AlternateEmailIcon />,
-              "mailto:abhijit945@gmail.com",
-              "abhijit945@gmail.com"
-            ),
-            getChip(
-              classes,
-              <LanguageIcon />,
-              "https://abhijit945.github.io",
-              "https://abhijit945.github.io"
-            ),
-            getChip(
-              classes,
-              <GitHubIcon />,
-              "https://github.com/abhijit945",
-              "https://github.com/abhijit945"
-            ),
-            getChip(
-              classes,
-              <LinkedInIcon />,
-              "https://www.linkedin.com/in/raoabhijit",
-              "https://www.linkedin.com/in/raoabhijit"
-            )
-          ]}
+          {getAvatarList().map(m => getChip(classes, m.icon, m.link, m.label))}
         </CardContent>
       </Card>
     </Box>

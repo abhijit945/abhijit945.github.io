@@ -9,11 +9,11 @@ import theme from "./helpers/themeHelper";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <React.Fragment>
+      <>
         <BackToTop />
         <CssBaseline />
         <TabComponent />
-      </React.Fragment>
+      </>
     </ThemeProvider>
   );
 }

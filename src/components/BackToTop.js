@@ -52,7 +52,7 @@ ScrollTop.propTypes = {
 
 export default function BackToTop(props) {
   return (
-    <React.Fragment>
+    <>
       <Header />
       <Toolbar id="back-to-top-anchor" />
       <ScrollTop {...props}>
@@ -60,6 +60,6 @@ export default function BackToTop(props) {
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollTop>
-    </React.Fragment>
+    </>
   );
 }
