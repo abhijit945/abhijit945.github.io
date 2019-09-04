@@ -1,28 +1,15 @@
 import React from "react";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import Chip from "@material-ui/core/Chip";
 import Box from "@material-ui/core/Box";
+import Chip from "@material-ui/core/Chip";
 import Avatar from "@material-ui/core/Avatar";
 import getAvatarList from "../helpers/avatarList";
 
 const useStyles = makeStyles(theme => ({
-  boxRoot: {
-    display: "flex",
-    justifyContent: "center"
-  },
   cardRoot: {
-    marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(2),
-    minWidth: 275,
     display: "flex",
-    flexDirection: "row",
-    [theme.breakpoints.up("sm")]: {
-      flexDirection: "column"
-    },
+    flexDirection: "column",
     alignItems: "start",
     justifyContent: "center"
   },
@@ -49,6 +36,7 @@ const getChip = (classes, avatar, link, label) => {
       component="a"
       clickable
       href={link}
+      target="_blank"
       label={label}
     />
   ) : (
@@ -58,6 +46,7 @@ const getChip = (classes, avatar, link, label) => {
       color="secondary"
       component="a"
       clickable="true"
+      target="_blank"
       href={link}
     >
       {avatar}
@@ -67,25 +56,9 @@ const getChip = (classes, avatar, link, label) => {
 
 export default function Contacts() {
   const classes = useStyles();
-  const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up("sm"));
-
   return (
-    <Box className={classes.boxRoot}>
-      <Card>
-        <CardContent className={classes.cardRoot}>
-          <Typography
-            variant="h5"
-            component="h2"
-            hidden={!matches}
-            color="textSecondary"
-            gutterBottom
-          >
-            Contact
-          </Typography>
-          {getAvatarList().map(m => getChip(classes, m.icon, m.link, m.label))}
-        </CardContent>
-      </Card>
+    <Box>
+      {getAvatarList().map(m => getChip(classes, m.icon, m.link, m.label))}
     </Box>
   );
 }

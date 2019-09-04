@@ -40,6 +40,7 @@ export default function Headers() {
               color="secondary"
               component="a"
               clickable="true"
+              target="_blank"
               href={m.link}
             >
               {m.icon}
