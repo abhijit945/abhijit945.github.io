@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     maxWidth: "100vw",
-    marginTop: theme.spacing(20)
+    marginTop: theme.spacing(17)
   },
   tab: {
     textTransform: "none"

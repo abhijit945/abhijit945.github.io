@@ -4,7 +4,7 @@ import Avatar from "@material-ui/core/Avatar";
 
 const useStyles = makeStyles({
   avatar: {
-    margin: 10,
+    margin: 5,
     width: 128,
     height: 128
   }

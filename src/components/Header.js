@@ -32,7 +32,7 @@ export default function Headers() {
     <AppBar>
       <Toolbar className={classes.root}>
         <MyAvatar />
-        <Box p={2} className={classes.headerContactRoot}>
+        <Box p={1} className={classes.headerContactRoot}>
           {getAvatarList().map(m => (
             <Avatar
               className={classes.contactAvatar}

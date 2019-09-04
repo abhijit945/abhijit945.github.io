@@ -58,7 +58,7 @@ export default function HomePage() {
             React, React DOM, React Router and Material-UI. It is designed to be
             minimal and concise. <br />I like to do week-end projects involving
             React, D3, cool JavaScript libraries. When I am not coding, you can
-            usually find me playing video games such as CS: GO or reading any
+            usually find me playing video games such as CS:GO or reading any
             cool fiction novel.
           </Typography>
         </CardContent>
