@@ -25,6 +25,7 @@ My personal portfolio website hosted on Github Pages.
 
 4. Projects
 
-   - [ ] Add Contents to Project - fetch from github and also blogs
-   - [ ] Github API to _retrieve projects_
-   - [ ] Github API to _retrieve activity_
+   - [x] Add Contents to Project - fetch from github and also blogs
+   - [x] Github API to _retrieve projects_
+   - [x] Github API to _retrieve pinned_
+   - [x] Github API to _retrieve activity_

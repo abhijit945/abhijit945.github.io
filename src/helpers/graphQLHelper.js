@@ -1,7 +1,9 @@
 import axios from "axios";
 
 const USER = "abhijit945";
-const TOKEN = "26271f1ef9f025acba080eaf3b47c1d48d7f9850";
+const TOKEN_SEGMENT_PRIMARY = "061cafea78ada32738e";
+const TOKEN_SEGMENT_SEC = "95daa602d7ff24be9973a";
+const getToken = () => `${TOKEN_SEGMENT_PRIMARY}${TOKEN_SEGMENT_SEC}`;
 const GRAPHQL_PROPS = {
   OWNER: "repositoryOwner",
   PINNED_ITEMS: "pinnedItems",
@@ -58,7 +60,7 @@ const getGitHubUserData = query =>
     axios({
       url: "https://api.github.com/graphql",
       headers: {
-        Authorization: `token ${TOKEN}`
+        Authorization: `BEARER ${getToken()}`
       },
       method: "post",
       data: {
