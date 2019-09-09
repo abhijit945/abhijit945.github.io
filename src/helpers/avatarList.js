@@ -9,17 +9,6 @@ import LinkedInIcon from "../components/LinkedInIcon";
 const getAvatarList = () => [
   {
     icon: (
-      <Tooltip title="Email">
-        <IconButton color="inherit" aria-label="Email">
-          <AlternateEmailIcon />
-        </IconButton>
-      </Tooltip>
-    ),
-    link: "mailto:abhijit945@gmail.com",
-    label: "abhijit945@gmail.com"
-  },
-  {
-    icon: (
       <Tooltip title="Website">
         <IconButton color="inherit" aria-label="Website">
           <LanguageIcon />
@@ -28,6 +17,17 @@ const getAvatarList = () => [
     ),
     link: "https://abhijit945.github.io",
     label: "https://abhijit945.github.io"
+  },
+  {
+    icon: (
+      <Tooltip title="Email">
+        <IconButton color="inherit" aria-label="Email">
+          <AlternateEmailIcon />
+        </IconButton>
+      </Tooltip>
+    ),
+    link: "mailto:abhijit945@gmail.com",
+    label: "abhijit945@gmail.com"
   },
   {
     icon: (

@@ -19,19 +19,21 @@ export default function MarkdownComponent(props) {
   const { title, markdownContent } = props;
   const classes = useStyles();
   return (
-    <Card className={classes.card}>
-      <CardContent>
-        <Typography variant="h5" color="textSecondary" gutterBottom>
-          {title}
-        </Typography>
-        <Typography
-          variant="body1"
-          dangerouslySetInnerHTML={{
-            __html: marked(DOMPurify.sanitize(markdownContent))
-          }}
-         />
-      </CardContent>
-    </Card>
+    <>
+      <Typography variant="h5" color="textSecondary" gutterBottom>
+        {title}
+      </Typography>
+      <Card className={classes.card}>
+        <CardContent>
+          <Typography
+            variant="body1"
+            dangerouslySetInnerHTML={{
+              __html: marked(DOMPurify.sanitize(markdownContent))
+            }}
+          />
+        </CardContent>
+      </Card>
+    </>
   );
 }
 

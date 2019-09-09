@@ -56,8 +56,7 @@ export default function ProjectPage() {
           unmountOnExit
         >
           <CircularProgress
-            size={100}
-            thickness={2}
+            size={50}
             className={classes.progress}
             color="secondary"
           />

@@ -4,9 +4,8 @@ import Avatar from "@material-ui/core/Avatar";
 
 const useStyles = makeStyles({
   avatar: {
-    margin: 5,
-    width: 128,
-    height: 128
+    width: 196,
+    height: 196
   }
 });
 
@@ -15,9 +14,9 @@ export default function MyAvatar() {
 
   return (
     <Avatar
-        alt="Abhijit Rao"
-        src="https://github.com/abhijit945.png?size=512"
-        className={classes.avatar}
-      />
+      alt="Abhijit Rao"
+      src="https://github.com/abhijit945.png?size=512"
+      className={classes.avatar}
+    />
   );
 }

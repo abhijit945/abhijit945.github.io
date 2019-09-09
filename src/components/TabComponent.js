@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Box from "@material-ui/core/Box";
+import AppBar from "@material-ui/core/AppBar";
 import TabPanel, { a11yProps } from "./TabPanel";
 import getContents from "../helpers/contentList";
 
@@ -17,11 +18,11 @@ const getIndex = (location, routeList) => {
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    maxWidth: "100vw",
-    marginTop: theme.spacing(17)
+    maxWidth: "100vw"
   },
   tab: {
-    textTransform: "none"
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2)
   },
   indicator: {
     display: "flex",
@@ -52,34 +53,36 @@ export default function TabComponent() {
       <Route
         path="/"
         render={({ location }) => (
-          <Box className={classes.root}>
-            <Tabs
-              TabIndicatorProps={{ children: <div /> }}
-              value={location.pathname}
-              classes={{ indicator: classes.indicator }}
-              variant="fullWidth"
-              centered
-              indicatorColor="secondary"
-              textColor="secondary"
-              aria-label="Site options lists"
-            >
-              {getContents().map((t, i) => (
-                <Tab
-                  value={t.route}
-                  component={Link}
-                  to={t.route}
-                  className={classes.tab}
-                  key={t.display}
-                  label={
-                    <Box className={classes.tabLabel}>
-                      <t.icon viewBox="0 0 24 24" />
-                      <Box className={classes.tabDisplay}>{t.display}</Box>
-                    </Box>
-                  }
-                  {...a11yProps(i)}
-                />
-              ))}
-            </Tabs>
+          <Box>
+            <AppBar position="sticky" key="appbar" className={classes.root}>
+              <Tabs
+                TabIndicatorProps={{ children: <div /> }}
+                value={location.pathname}
+                centered
+                classes={{ indicator: classes.indicator }}
+                indicatorColor="secondary"
+                textColor="inherit"
+                aria-label="Site options lists"
+              >
+                {getContents().map((t, i) => (
+                  <Tab
+                    value={t.route}
+                    component={Link}
+                    to={t.route}
+                    className={classes.tab}
+                    key={t.display}
+                    wrapped
+                    label={
+                      <Box className={classes.tabLabel}>
+                        <t.icon viewBox="0 0 24 24" />
+                        <Box className={classes.tabDisplay}>{t.display}</Box>
+                      </Box>
+                    }
+                    {...a11yProps(i)}
+                  />
+                ))}
+              </Tabs>
+            </AppBar>
             <Switch>
               {getContents().map(t => (
                 <Route
