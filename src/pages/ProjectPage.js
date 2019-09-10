@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
   },
   cardRoot: {
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "column",
     flexWrap: "wrap"
   }
 }));
@@ -62,7 +62,7 @@ export default function ProjectPage() {
           />
         </Fade>
       </Container>
-      <Box hidden={isHidden}>
+      <Box p={2} hidden={isHidden}>
         <Typography variant="h5" color="textSecondary" gutterBottom>
           Project Highlights
         </Typography>
