@@ -26,8 +26,8 @@ const getAvatarList = () => [
         </IconButton>
       </Tooltip>
     ),
-    link: "mailto:abhijit945@gmail.com",
-    label: "abhijit945@gmail.com"
+    link: "mailto:abhijit945.work@gmail.com",
+    label: "abhijit945.work@gmail.com"
   },
   {
     icon: (
