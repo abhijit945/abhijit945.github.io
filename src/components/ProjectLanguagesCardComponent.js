@@ -8,6 +8,10 @@ import Chip from "@material-ui/core/Chip";
 import Avatar from "@material-ui/core/Avatar";
 
 const useStyles = makeStyles(theme => ({
+  avatar: {
+    width: 16,
+    height: 16
+  },
   card: {
     margin: theme.spacing(2),
     minWidth: 275
@@ -34,7 +38,12 @@ export default function ProjectLanguagesCardComponent(props) {
               className={classes.chipRoot}
               key={l.name}
               color="secondary"
-              avatar={<Avatar style={{ background: l.color }} />}
+              avatar={
+                <Avatar
+                  className={classes.avatar}
+                  style={{ background: l.color }}
+                />
+              }
               component="div"
               label={l.name}
             />

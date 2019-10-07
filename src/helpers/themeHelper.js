@@ -22,10 +22,16 @@ const getTheme = mode =>
   createMuiTheme({
     palette: {
       primary: {
-        main: "#1769aa"
+        light: "#5997dc",
+        main: "#1769aa",
+        dark: "#003f7a",
+        contrastText: "#fff"
       },
       secondary: {
-        main: "#f44336"
+        light: "#ff7961",
+        main: "#f44336",
+        dark: "#ba000d",
+        contrastText: "#fff"
       },
       type: mode
     }

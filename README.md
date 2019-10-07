@@ -20,7 +20,7 @@ My personal portfolio website hosted on Github Pages.
 
 3. Resume
 
-   - [ ] Make headers sticky
+   - [x] Make headers sticky
    - [x] Add Contents to Resume
    - [ ] Add Contents to Skills - Use `Sliders`
 

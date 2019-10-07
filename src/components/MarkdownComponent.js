@@ -5,9 +5,14 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import marked from "marked";
+import AppBar from "@material-ui/core/AppBar";
 import DOMPurify from "dompurify";
 
 const useStyles = makeStyles(theme => ({
+  appBarHeader: {
+    top: theme.spacing(8),
+    padding: theme.spacing(2)
+  },
   card: {
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
@@ -20,9 +25,16 @@ export default function MarkdownComponent(props) {
   const classes = useStyles();
   return (
     <>
-      <Typography variant="h5" color="textSecondary" gutterBottom>
-        {title}
-      </Typography>
+      <AppBar
+        className={classes.appBarHeader}
+        key="header"
+        position="sticky"
+        color="default"
+      >
+        <Typography variant="h6" color="textSecondary">
+          {title}
+        </Typography>
+      </AppBar>
       <Card className={classes.card}>
         <CardContent>
           <Typography
