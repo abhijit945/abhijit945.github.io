@@ -53,7 +53,7 @@ export default function TabComponent() {
       <Route
         path="/"
         render={({ location }) => (
-          <Box>
+          <>
             <AppBar position="sticky" key="appbar" className={classes.root}>
               <Tabs
                 TabIndicatorProps={{ children: <div /> }}
@@ -102,7 +102,7 @@ export default function TabComponent() {
                 />
               ))}
             </Switch>
-          </Box>
+          </>
         )}
       />
     </HashRouter>

@@ -9,7 +9,6 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Collapse from "@material-ui/core/Collapse";
 import Contacts from "../components/Contacts";
-import ContactContent from "../components/ContactContent";
 
 const useStyles = makeStyles(theme => ({
   boxRoot: {
@@ -40,7 +39,6 @@ export default function HomePage() {
   return (
     <Box p={3}>
       <Card>
-        <ContactContent />
         <CardContent className={classes.cardRoot}>
           <Typography
             variant="h5"

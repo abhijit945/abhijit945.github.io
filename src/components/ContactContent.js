@@ -1,8 +1,13 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
+import Tooltip from "@material-ui/core/Tooltip";
+import IconButton from "@material-ui/core/IconButton";
 import Avatar from "@material-ui/core/Avatar";
+import ColorLensRoundedIcon from "@material-ui/icons/ColorLensRounded";
 import MyAvatar from "./Avatar";
+import { generateNewRandomTheme } from "../helpers/themeHelper";
 import getAvatarList from "../helpers/avatarList";
 
 const useStyles = makeStyles(theme => ({
@@ -10,7 +15,8 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    flexDirection: "column"
+    flexDirection: "column",
+    backgroundColor: theme.palette.primary.main
   },
   headerContactRoot: {
     display: "flex",
@@ -24,8 +30,12 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function ContactContent() {
+export default function ContactContent({ setCurrentTheme }) {
   const classes = useStyles();
+  function handleThemeChange() {
+    setCurrentTheme(generateNewRandomTheme());
+  }
+
   return (
     <Box className={classes.root} p={1}>
       <MyAvatar />
@@ -43,7 +53,24 @@ export default function ContactContent() {
             {m.icon}
           </Avatar>
         ))}
+        <Avatar
+          className={classes.contactAvatar}
+          key="mystery"
+          color="secondary"
+          clickable="true"
+          onClick={handleThemeChange}
+        >
+          <Tooltip title="Spooky mystery button!!">
+            <IconButton color="inherit" aria-label="Mystery">
+              <ColorLensRoundedIcon />
+            </IconButton>
+          </Tooltip>
+        </Avatar>
       </Box>
     </Box>
   );
 }
+
+ContactContent.propTypes = {
+  setCurrentTheme: PropTypes.func.isRequired
+};

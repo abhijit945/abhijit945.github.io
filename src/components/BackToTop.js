@@ -4,7 +4,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import { makeStyles } from "@material-ui/core/styles";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Fab from "@material-ui/core/Fab";
-import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+import KeyboardArrowUpRoundedIcon from "@material-ui/icons/KeyboardArrowUpRounded";
 import Zoom from "@material-ui/core/Zoom";
 
 const useStyles = makeStyles(theme => ({
@@ -59,7 +59,7 @@ export default function BackToTop(props) {
       <Toolbar className={classes.toolbarRoot} id="back-to-top-anchor" />
       <ScrollTop {...props}>
         <Fab color="secondary" size="small" aria-label="scroll back to top">
-          <KeyboardArrowUpIcon />
+          <KeyboardArrowUpRoundedIcon />
         </Fab>
       </ScrollTop>
     </>
