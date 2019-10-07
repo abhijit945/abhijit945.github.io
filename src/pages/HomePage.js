@@ -11,10 +11,6 @@ import { Paper } from "@material-ui/core";
 import Contacts from "../components/Contacts";
 
 const useStyles = makeStyles(theme => ({
-  boxRoot: {
-    display: "flex",
-    justifyContent: "center"
-  },
   cardRoot: {
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
@@ -40,14 +36,6 @@ export default function HomePage() {
     <Paper p={3}>
       <Card>
         <CardContent className={classes.cardRoot}>
-          <Typography
-            variant="h5"
-            component="h2"
-            color="textSecondary"
-            gutterBottom
-          >
-            About
-          </Typography>
           <Typography variant="body1" component="p" gutterBottom>
             Hi! I am Abhijit Rao. Software engineer, Full-stack developer,
             Front-end/Web developer by profession.

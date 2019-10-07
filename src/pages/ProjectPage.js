@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import Box from "@material-ui/core/Box";
 import Fade from "@material-ui/core/Fade";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
-import Divider from "@material-ui/core/Divider";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   getGitHubUserData,
@@ -24,12 +24,83 @@ const useStyles = makeStyles(theme => ({
   progress: {
     margin: theme.spacing(2)
   },
+  title: {
+    margin: theme.spacing(2)
+  },
   cardRoot: {
     display: "flex",
     flexDirection: "column",
     flexWrap: "wrap"
   }
 }));
+
+function Highlights({ classes, isHidden, userData }) {
+  return (
+    <>
+      <Typography
+        hidden={isHidden}
+        className={classes.title}
+        variant="h5"
+        color="textSecondary"
+        gutterBottom
+      >
+        Project Highlights
+      </Typography>
+      <Box hidden={isHidden} className={classes.cardRoot}>
+        {parsePinnedRepos(userData).map(p => (
+          <PinnedProjectCardComponent
+            name={p.node.name}
+            key={p.node.name}
+            description={p.node.description}
+            url={p.node.url}
+            lang={p.node.languages.nodes}
+          />
+        ))}
+      </Box>
+    </>
+  );
+}
+Highlights.propTypes = {
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
+  isHidden: PropTypes.bool.isRequired,
+  userData: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.any),
+    PropTypes.objectOf(PropTypes.any)
+  ]).isRequired
+};
+
+function Languages({ classes, isHidden, userData }) {
+  return (
+    <>
+      <Typography
+        className={classes.title}
+        hidden={isHidden}
+        variant="h5"
+        color="textSecondary"
+        gutterBottom
+      >
+        Languages Used
+      </Typography>
+      <Box hidden={isHidden} className={classes.cardRoot}>
+        {parseRepoLanguages(userData).map(p => (
+          <ProjectLanguagesCardComponent
+            name={p.node.name}
+            key={p.node.name}
+            lang={p.node.languages.nodes}
+          />
+        ))}
+      </Box>
+    </>
+  );
+}
+Languages.propTypes = {
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
+  isHidden: PropTypes.bool.isRequired,
+  userData: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.any),
+    PropTypes.objectOf(PropTypes.any)
+  ]).isRequired
+};
 
 export default function ProjectPage() {
   const classes = useStyles();
@@ -46,7 +117,7 @@ export default function ProjectPage() {
   }, []);
 
   return (
-    <Box p={3}>
+    <>
       <Container className={classes.root}>
         <Fade
           in={isLoading}
@@ -62,37 +133,8 @@ export default function ProjectPage() {
           />
         </Fade>
       </Container>
-      <Box p={2} hidden={isHidden}>
-        <Typography variant="h5" color="textSecondary" gutterBottom>
-          Project Highlights
-        </Typography>
-        <Box className={classes.cardRoot}>
-          {parsePinnedRepos(userData).map(p => (
-            <PinnedProjectCardComponent
-              name={p.node.name}
-              key={p.node.name}
-              description={p.node.description}
-              url={p.node.url}
-              lang={p.node.languages.nodes}
-            />
-          ))}
-        </Box>
-      </Box>
-      <Divider hidden={isHidden} />
-      <Box p={2} hidden={isHidden}>
-        <Typography variant="h5" color="textSecondary" gutterBottom>
-          Languages Used
-        </Typography>
-        <Box className={classes.cardRoot}>
-          {parseRepoLanguages(userData).map(p => (
-            <ProjectLanguagesCardComponent
-              name={p.node.name}
-              key={p.node.name}
-              lang={p.node.languages.nodes}
-            />
-          ))}
-        </Box>
-      </Box>
-    </Box>
+      <Highlights classes={classes} isHidden={isHidden} userData={userData} />
+      <Languages classes={classes} isHidden={isHidden} userData={userData} />
+    </>
   );
 }

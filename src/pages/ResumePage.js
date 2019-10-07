@@ -8,7 +8,7 @@ import AccomplishmentsDoc from "../components/docs/Accomplishments.md";
 
 export default function ResumePage() {
   return (
-    <Box p={3}>
+    <Box>
       <MarkdownComponent title="Experience" markdownContent={ExperienceDoc} />
       <MarkdownComponent
         title="Accomplishments"

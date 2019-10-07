@@ -10,11 +10,12 @@ import DOMPurify from "dompurify";
 
 const useStyles = makeStyles(theme => ({
   appBarHeader: {
-    top: theme.spacing(8),
-    padding: theme.spacing(2)
+    top: theme.spacing(7),
+    padding: theme.spacing(1.5),
+    borderRadius: theme.spacing(0.5)
   },
   card: {
-    marginTop: theme.spacing(2),
+    marginTop: theme.spacing(1),
     marginBottom: theme.spacing(2),
     minWidth: 275
   }
@@ -29,7 +30,7 @@ export default function MarkdownComponent(props) {
         className={classes.appBarHeader}
         key="header"
         position="sticky"
-        color="default"
+        color="inherit"
       >
         <Typography variant="h6" color="textSecondary">
           {title}
