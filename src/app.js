@@ -6,18 +6,24 @@ import TabComponent from "./components/TabComponent";
 import HideOnScroll from "./components/HideOnScroll";
 import ContactContent from "./components/ContactContent";
 import BackToTop from "./components/BackToTop";
-import theme from "./helpers/themeHelper";
+import getTheme from "./helpers/themeHelper";
 
 function App() {
-  const [currentTheme, setCurrentTheme] = useState(theme);
+  const [currentMode, setCurrentMode] = useState("light");
+  const [currentTheme, setCurrentTheme] = useState(getTheme(currentMode));
+
   return (
     <ThemeProvider theme={currentTheme}>
       <CssBaseline />
-        <BackToTop />
-        <HideOnScroll>
-          <ContactContent setCurrentTheme={setCurrentTheme}/>
-        </HideOnScroll>
-        <TabComponent />
+      <BackToTop />
+      <HideOnScroll>
+        <ContactContent
+          setCurrentTheme={setCurrentTheme}
+          currentMode={currentMode}
+          setCurrentMode={setCurrentMode}
+        />
+      </HideOnScroll>
+      <TabComponent />
     </ThemeProvider>
   );
 }

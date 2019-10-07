@@ -7,20 +7,21 @@ My personal portfolio website hosted on Github Pages.
 1. Main
 
    - [x] Reduce the size for selection in tabs
+   - [x] Add theming
+   - [x] Add dark mode
 
 2. Home
 
    - [x] Add Contents to Home - About me, work and passion
-   - [ ] _Programming languages used_ via GitHub (Use `Chips`)
+   - [x] _Programming languages used_ via GitHub (Use `Chips`)
    - [x] Add Contact information
    - [x] Add cards for all contents
    - [x] For smaller screen reduce the contacts to small avatars
 
 3. Resume
 
+   - [ ] Make headers sticky
    - [x] Add Contents to Resume
-     - [ ] Card Collapse descriptions
-     - [ ] Add `Chips` for Card titles
    - [ ] Add Contents to Skills - Use `Sliders`
 
 4. Projects

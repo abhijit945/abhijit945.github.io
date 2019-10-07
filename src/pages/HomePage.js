@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import clsx from "clsx";
-import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -8,6 +7,7 @@ import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Collapse from "@material-ui/core/Collapse";
+import { Paper } from "@material-ui/core";
 import Contacts from "../components/Contacts";
 
 const useStyles = makeStyles(theme => ({
@@ -37,7 +37,7 @@ export default function HomePage() {
   }
 
   return (
-    <Box p={3}>
+    <Paper p={3}>
       <Card>
         <CardContent className={classes.cardRoot}>
           <Typography
@@ -84,6 +84,6 @@ export default function HomePage() {
           </CardContent>
         </Collapse>
       </Card>
-    </Box>
+    </Paper>
   );
 }

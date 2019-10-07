@@ -6,8 +6,12 @@ import Tooltip from "@material-ui/core/Tooltip";
 import IconButton from "@material-ui/core/IconButton";
 import Avatar from "@material-ui/core/Avatar";
 import ColorLensRoundedIcon from "@material-ui/icons/ColorLensRounded";
+import InvertColorsRoundedIcon from "@material-ui/icons/InvertColorsRounded";
 import MyAvatar from "./Avatar";
-import { generateNewRandomTheme } from "../helpers/themeHelper";
+import getTheme, {
+  generateNewRandomTheme,
+  toggleMode
+} from "../helpers/themeHelper";
 import getAvatarList from "../helpers/avatarList";
 
 const useStyles = makeStyles(theme => ({
@@ -30,10 +34,21 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function ContactContent({ setCurrentTheme }) {
+export default function ContactContent({
+  setCurrentTheme,
+  currentMode,
+  setCurrentMode
+}) {
   const classes = useStyles();
+
   function handleThemeChange() {
-    setCurrentTheme(generateNewRandomTheme());
+    setCurrentTheme(generateNewRandomTheme("light"));
+  }
+
+  function handleModeChange() {
+    const toggledMode = toggleMode(currentMode);
+    setCurrentMode(toggledMode);
+    setCurrentTheme(getTheme(toggledMode));
   }
 
   return (
@@ -66,11 +81,26 @@ export default function ContactContent({ setCurrentTheme }) {
             </IconButton>
           </Tooltip>
         </Avatar>
+        <Avatar
+          className={classes.contactAvatar}
+          key="mode"
+          color="secondary"
+          clickable="true"
+          onClick={handleModeChange}
+        >
+          <Tooltip title="Change mode">
+            <IconButton color="inherit" aria-label="mode">
+              <InvertColorsRoundedIcon />
+            </IconButton>
+          </Tooltip>
+        </Avatar>
       </Box>
     </Box>
   );
 }
 
 ContactContent.propTypes = {
-  setCurrentTheme: PropTypes.func.isRequired
+  setCurrentTheme: PropTypes.func.isRequired,
+  currentMode: PropTypes.string.isRequired,
+  setCurrentMode: PropTypes.func.isRequired
 };

@@ -4,7 +4,6 @@ import {
   blue,
   amber,
   blueGrey,
-  common,
   deepOrange,
   deepPurple,
   green,
@@ -12,7 +11,6 @@ import {
   grey,
   lightBlue,
   lightGreen,
-  lime,
   orange,
   pink,
   purple,
@@ -20,23 +18,23 @@ import {
   yellow
 } from "@material-ui/core/colors";
 
-export default createMuiTheme({
-  palette: {
-    primary: {
-      main: "#1769aa"
-    },
-    secondary: {
-      main: "#f44336"
+const getTheme = mode =>
+  createMuiTheme({
+    palette: {
+      primary: {
+        main: "#1769aa"
+      },
+      secondary: {
+        main: "#f44336"
+      },
+      type: mode
     }
-  }
-});
-
+  });
 const customThemeColors = [
   amber,
   red,
   blue,
   blueGrey,
-  common,
   deepOrange,
   deepPurple,
   green,
@@ -44,15 +42,13 @@ const customThemeColors = [
   indigo,
   lightBlue,
   lightGreen,
-  lime,
   orange,
   pink,
   purple,
   teal,
   yellow
 ];
-
-export const generateNewRandomTheme = () => {
+const generateNewRandomTheme = mode => {
   const primaryColor =
     customThemeColors[Math.floor(Math.random() * customThemeColors.length)];
   const secondaryColor =
@@ -61,7 +57,12 @@ export const generateNewRandomTheme = () => {
   return createMuiTheme({
     palette: {
       primary: primaryColor,
-      secondary: secondaryColor
+      secondary: secondaryColor,
+      type: mode
     }
   });
 };
+
+const toggleMode = currentMode => (currentMode === "dark" ? "light" : "dark");
+
+export { getTheme as default, generateNewRandomTheme, toggleMode };
