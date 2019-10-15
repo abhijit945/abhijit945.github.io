@@ -10,12 +10,12 @@ export default function ResumePage() {
   return (
     <Box>
       <MarkdownComponent title="Experience" markdownContent={ExperienceDoc} />
+      <MarkdownComponent title="Skills" markdownContent={SkillsDoc} />
+      <MarkdownComponent title="Education" markdownContent={EducationDoc} />
       <MarkdownComponent
         title="Accomplishments"
         markdownContent={AccomplishmentsDoc}
       />
-      <MarkdownComponent title="Skills" markdownContent={SkillsDoc} />
-      <MarkdownComponent title="Education" markdownContent={EducationDoc} />
     </Box>
   );
 }

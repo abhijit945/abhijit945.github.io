@@ -5,18 +5,17 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import marked from "marked";
-import AppBar from "@material-ui/core/AppBar";
+import Paper from "@material-ui/core/Paper";
 import DOMPurify from "dompurify";
 
 const useStyles = makeStyles(theme => ({
-  appBarHeader: {
-    top: theme.spacing(7),
-    padding: theme.spacing(1.5),
-    borderRadius: theme.spacing(0.5)
+  titleHeader: {
+    display: "flex",
+    padding: theme.spacing(1.5)
   },
   card: {
-    marginTop: theme.spacing(1),
-    marginBottom: theme.spacing(2),
+    marginTop: theme.spacing(0.5),
+    marginBottom: theme.spacing(3),
     minWidth: 275
   }
 }));
@@ -26,16 +25,11 @@ export default function MarkdownComponent(props) {
   const classes = useStyles();
   return (
     <>
-      <AppBar
-        className={classes.appBarHeader}
-        key="header"
-        position="sticky"
-        color="inherit"
-      >
-        <Typography variant="h6" color="textSecondary">
+      <Paper className={classes.titleHeader}>
+        <Typography variant="h6" color="primary">
           {title}
         </Typography>
-      </AppBar>
+      </Paper>
       <Card className={classes.card}>
         <CardContent>
           <Typography
