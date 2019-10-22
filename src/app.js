@@ -11,7 +11,6 @@ import getTheme from "./helpers/themeHelper";
 function App() {
   const [currentMode, setCurrentMode] = useState("light");
   const [currentTheme, setCurrentTheme] = useState(getTheme(currentMode));
-
   return (
     <ThemeProvider theme={currentTheme}>
       <CssBaseline />

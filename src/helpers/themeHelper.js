@@ -15,39 +15,24 @@ const getTheme = mode =>
       primary: {
         main: "#1769aa"
       },
-      secondary: {
-        main: "#ab003c"
-      },
-      type: mode,
-      typography: {
-        fontFamily: [
-          "-apple-system",
-          "BlinkMacSystemFont",
-          '"Segoe UI"',
-          "Roboto",
-          '"Helvetica Neue"',
-          "Arial",
-          "sans-serif",
-          '"Apple Color Emoji"',
-          '"Segoe UI Emoji"',
-          '"Segoe UI Symbol"'
-        ].join(",")
-      }
+      type: mode
+    },
+    typography: {
+      fontFamily: [
+        "-apple-system",
+        "BlinkMacSystemFont",
+        '"Segoe UI"',
+        "sans-serif",
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"'
+      ].join(",")
     }
   });
-const customThemeColors = [
-  amber,
-  blue,
-  deepPurple,
-  grey,
-  indigo,
-  teal,
-  yellow
-];
+const customThemeColors = [amber, blue, deepPurple, grey, indigo, teal, yellow];
 const generateNewRandomTheme = mode => {
   const primaryColor =
     customThemeColors[Math.floor(Math.random() * customThemeColors.length)];
-
   return createMuiTheme({
     palette: {
       primary: primaryColor,

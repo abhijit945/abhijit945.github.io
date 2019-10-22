@@ -26,9 +26,7 @@ export default function MarkdownComponent(props) {
   return (
     <>
       <Paper className={classes.titleHeader}>
-        <Typography variant="h6" color="primary">
-          {title}
-        </Typography>
+        <Typography variant="h6">{title}</Typography>
       </Paper>
       <Card className={classes.card}>
         <CardContent>
