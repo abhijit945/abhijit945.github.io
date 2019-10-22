@@ -16,7 +16,7 @@ const getTheme = mode =>
         main: "#1769aa"
       },
       secondary: {
-        main: "#00a152"
+        main: "#ab003c"
       },
       type: mode,
       typography: {

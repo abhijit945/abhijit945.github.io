@@ -24,16 +24,6 @@ const useStyles = makeStyles(theme => ({
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2)
   },
-  indicator: {
-    display: "flex",
-    justifyContent: "center",
-    backgroundColor: "transparent",
-    "& > div": {
-      maxWidth: theme.spacing(15),
-      width: "100%",
-      backgroundColor: theme.palette.secondary.main
-    }
-  },
   tabLabel: {
     display: "flex",
     flexDirection: "row",
@@ -56,10 +46,8 @@ export default function TabComponent() {
           <>
             <AppBar position="sticky" key="appbar" className={classes.root}>
               <Tabs
-                TabIndicatorProps={{ children: <div /> }}
                 value={location.pathname}
                 centered
-                classes={{ indicator: classes.indicator }}
                 indicatorColor="secondary"
                 textColor="inherit"
                 aria-label="Site options lists"
