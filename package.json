@@ -22,7 +22,7 @@
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
     "clsx": "^1.0.4",
-    "dompurify": "^2.0.6",
+    "dompurify": "^2.0.7",
     "marked": "^0.7.0",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
@@ -45,7 +45,7 @@
     "less-loader": "^5.0.0",
     "markdown-loader": "^5.1.0",
     "prettier": "^1.17.1",
-    "webpack": "^4.41.1",
+    "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.2"
   },

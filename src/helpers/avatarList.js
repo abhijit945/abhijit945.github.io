@@ -1,8 +1,8 @@
 import React from "react";
 import Tooltip from "@material-ui/core/Tooltip";
 import IconButton from "@material-ui/core/IconButton";
-import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
-import LanguageIcon from "@material-ui/icons/Language";
+import AlternateEmailRoundedIcon from '@material-ui/icons/AlternateEmailRounded';
+import LanguageRoundedIcon from '@material-ui/icons/LanguageRounded';
 import GitHubIcon from "../components/GitHubIcon";
 import LinkedInIcon from "../components/LinkedInIcon";
 
@@ -22,7 +22,7 @@ const getAvatarList = () => [
     icon: (
       <Tooltip title="Email">
         <IconButton color="inherit" aria-label="Email">
-          <AlternateEmailIcon />
+          <AlternateEmailRoundedIcon />
         </IconButton>
       </Tooltip>
     ),
@@ -44,7 +44,7 @@ const getAvatarList = () => [
     icon: (
       <Tooltip title="Website">
         <IconButton color="inherit" aria-label="Website">
-          <LanguageIcon />
+          <LanguageRoundedIcon />
         </IconButton>
       </Tooltip>
     ),

@@ -7,7 +7,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 import IconButton from "@material-ui/core/IconButton";
 import Avatar from "@material-ui/core/Avatar";
 import ColorLensRoundedIcon from "@material-ui/icons/ColorLensRounded";
-import InvertColorsRoundedIcon from "@material-ui/icons/InvertColorsRounded";
+import Brightness6RoundedIcon from "@material-ui/icons/Brightness6Rounded";
 import Paper from "@material-ui/core/Paper";
 import MyAvatar from "./Avatar";
 import getTheme, {
@@ -59,7 +59,7 @@ export default function ContactContent({
       <Typography variant="h5" color="textSecondary" gutterBottom>
         Software engineer, fullstack developer, frontend developer
       </Typography>
-      <Box p={1} className={classes.headerContactRoot}>
+      <Box p={2} className={classes.headerContactRoot}>
         {getAvatarList().map(m => (
           <Avatar
             className={classes.contactAvatar}
@@ -95,7 +95,7 @@ export default function ContactContent({
         >
           <Tooltip title="Change mode">
             <IconButton color="inherit" aria-label="mode">
-              <InvertColorsRoundedIcon />
+              <Brightness6RoundedIcon />
             </IconButton>
           </Tooltip>
         </Avatar>
