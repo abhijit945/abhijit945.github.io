@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Box from "@material-ui/core/Box";
 import MarkdownComponent from "../components/MarkdownComponent";
 import ExperienceDoc from "../components/docs/Experience.md";
@@ -7,6 +7,9 @@ import SkillsDoc from "../components/docs/Skills.md";
 import AccomplishmentsDoc from "../components/docs/Accomplishments.md";
 
 export default function ResumePage() {
+  useEffect(() => {
+    document.title = "Abhijit Rao - Resume";
+  });
   return (
     <Box>
       <MarkdownComponent title="Experience" markdownContent={ExperienceDoc} />

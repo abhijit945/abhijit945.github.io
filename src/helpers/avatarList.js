@@ -9,14 +9,14 @@ import LinkedInIcon from "../components/LinkedInIcon";
 const getAvatarList = () => [
   {
     icon: (
-      <Tooltip title="Website">
-        <IconButton color="inherit" aria-label="Website">
-          <LanguageIcon />
+      <Tooltip title="LinkedIn">
+        <IconButton color="inherit" aria-label="LinkedIn">
+          <LinkedInIcon />
         </IconButton>
       </Tooltip>
     ),
-    link: "https://abhijit945.github.io",
-    label: "https://abhijit945.github.io"
+    link: "https://www.linkedin.com/in/raoabhijit",
+    label: "https://www.linkedin.com/in/raoabhijit"
   },
   {
     icon: (
@@ -42,14 +42,14 @@ const getAvatarList = () => [
   },
   {
     icon: (
-      <Tooltip title="LinkedIn">
-        <IconButton color="inherit" aria-label="LinkedIn">
-          <LinkedInIcon />
+      <Tooltip title="Website">
+        <IconButton color="inherit" aria-label="Website">
+          <LanguageIcon />
         </IconButton>
       </Tooltip>
     ),
-    link: "https://www.linkedin.com/in/raoabhijit",
-    label: "https://www.linkedin.com/in/raoabhijit"
+    link: "https://abhijit945.github.io",
+    label: "https://abhijit945.github.io"
   }
 ];
 

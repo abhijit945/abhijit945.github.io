@@ -1,12 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Tooltip from "@material-ui/core/Tooltip";
 import IconButton from "@material-ui/core/IconButton";
 import Avatar from "@material-ui/core/Avatar";
 import ColorLensRoundedIcon from "@material-ui/icons/ColorLensRounded";
 import InvertColorsRoundedIcon from "@material-ui/icons/InvertColorsRounded";
+import Paper from "@material-ui/core/Paper";
 import MyAvatar from "./Avatar";
 import getTheme, {
   generateNewRandomTheme,
@@ -52,8 +54,11 @@ export default function ContactContent({
   }
 
   return (
-    <Box className={classes.root} p={1}>
+    <Paper className={classes.root} p={1}>
       <MyAvatar />
+      <Typography variant="h5" color="textSecondary" gutterBottom>
+        Software engineer, fullstack developer, frontend developer
+      </Typography>
       <Box p={1} className={classes.headerContactRoot}>
         {getAvatarList().map(m => (
           <Avatar
@@ -95,7 +100,7 @@ export default function ContactContent({
           </Tooltip>
         </Avatar>
       </Box>
-    </Box>
+    </Paper>
   );
 }
 
