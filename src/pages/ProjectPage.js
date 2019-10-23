@@ -3,13 +3,15 @@ import PropTypes from "prop-types";
 import Box from "@material-ui/core/Box";
 import Fade from "@material-ui/core/Fade";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import Typography from "@material-ui/core/Typography";
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
+import CardHeader from "@material-ui/core/CardHeader";
 import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   getGitHubUserData,
   graphQLQuery,
-  parsePinnedRepos,
+  parsePinnedRepositories,
   parseRepoLanguages
 } from "../helpers/graphQLHelper";
 import PinnedProjectCardComponent from "../components/PinnedProjectCardComponent";
@@ -24,8 +26,10 @@ const useStyles = makeStyles(theme => ({
   progress: {
     margin: theme.spacing(2)
   },
-  title: {
-    margin: theme.spacing(2)
+  card: {
+    background: theme.palette.background.default,
+    minWidth: 275,
+    marginBottom: theme.spacing(2)
   },
   cardRoot: {
     display: "flex",
@@ -36,18 +40,10 @@ const useStyles = makeStyles(theme => ({
 
 function Highlights({ classes, isHidden, userData }) {
   return (
-    <>
-      <Typography
-        hidden={isHidden}
-        className={classes.title}
-        variant="h5"
-        color="textSecondary"
-        gutterBottom
-      >
-        Project Highlights
-      </Typography>
-      <Box hidden={isHidden} className={classes.cardRoot}>
-        {parsePinnedRepos(userData).map(p => (
+    <Card className={classes.card} hidden={isHidden}>
+      <CardHeader title="Project Highlights" />
+      <CardContent className={classes.cardRoot}>
+        {parsePinnedRepositories(userData).map(p => (
           <PinnedProjectCardComponent
             name={p.node.name}
             key={p.node.name}
@@ -56,8 +52,8 @@ function Highlights({ classes, isHidden, userData }) {
             lang={p.node.languages.nodes}
           />
         ))}
-      </Box>
-    </>
+      </CardContent>
+    </Card>
   );
 }
 Highlights.propTypes = {
@@ -71,17 +67,9 @@ Highlights.propTypes = {
 
 function Languages({ classes, isHidden, userData }) {
   return (
-    <>
-      <Typography
-        className={classes.title}
-        hidden={isHidden}
-        variant="h5"
-        color="textSecondary"
-        gutterBottom
-      >
-        Languages Used
-      </Typography>
-      <Box hidden={isHidden} className={classes.cardRoot}>
+    <Card className={classes.card} hidden={isHidden}>
+      <CardHeader title="Languages Used" />
+      <CardContent className={classes.cardRoot}>
         {parseRepoLanguages(userData).map(p => (
           <ProjectLanguagesCardComponent
             name={p.node.name}
@@ -89,8 +77,8 @@ function Languages({ classes, isHidden, userData }) {
             lang={p.node.languages.nodes}
           />
         ))}
-      </Box>
-    </>
+      </CardContent>
+    </Card>
   );
 }
 Languages.propTypes = {
@@ -136,8 +124,10 @@ export default function ProjectPage() {
           />
         </Fade>
       </Container>
-      <Highlights classes={classes} isHidden={isHidden} userData={userData} />
-      <Languages classes={classes} isHidden={isHidden} userData={userData} />
+      <Box>
+        <Highlights classes={classes} isHidden={isHidden} userData={userData} />
+        <Languages classes={classes} isHidden={isHidden} userData={userData} />
+      </Box>
     </>
   );
 }

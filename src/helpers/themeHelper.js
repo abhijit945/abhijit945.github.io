@@ -9,6 +9,18 @@ import {
   yellow
 } from "@material-ui/core/colors";
 
+const fontTypography = {
+  fontFamily: [
+    "-apple-system",
+    "BlinkMacSystemFont",
+    '"Segoe UI"',
+    "sans-serif",
+    '"Apple Color Emoji"',
+    '"Segoe UI Emoji"',
+    '"Segoe UI Symbol"'
+  ].join(",")
+};
+
 const getTheme = mode =>
   createMuiTheme({
     palette: {
@@ -17,17 +29,7 @@ const getTheme = mode =>
       },
       type: mode
     },
-    typography: {
-      fontFamily: [
-        "-apple-system",
-        "BlinkMacSystemFont",
-        '"Segoe UI"',
-        "sans-serif",
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"'
-      ].join(",")
-    }
+    typography: fontTypography
   });
 const customThemeColors = [amber, blue, deepPurple, grey, indigo, teal, yellow];
 const generateNewRandomTheme = mode => {
@@ -37,7 +39,8 @@ const generateNewRandomTheme = mode => {
     palette: {
       primary: primaryColor,
       type: mode
-    }
+    },
+    typography: fontTypography
   });
 };
 

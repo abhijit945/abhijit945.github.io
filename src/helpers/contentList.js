@@ -1,9 +1,11 @@
 import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
-import ComputerRoundedIcon from "@material-ui/icons/ComputerRounded";
-import DescriptionRoundedIcon from "@material-ui/icons/DescriptionRounded";
+import SchoolRoundedIcon from "@material-ui/icons/SchoolRounded";
+import WorkRoundedIcon from "@material-ui/icons/WorkRounded";
+import BuildRoundedIcon from "@material-ui/icons/BuildRounded";
 import HomePage from "../pages/HomePage";
+import SkillsPage from "../pages/SkillsPage";
 import ProjectPage from "../pages/ProjectPage";
-import ResumePage from "../pages/ResumePage";
+import ExperiencePage from "../pages/ExperiencePage";
 
 const getContents = () => [
   {
@@ -13,15 +15,21 @@ const getContents = () => [
     content: () => HomePage
   },
   {
-    display: "Resume",
-    route: "/resume",
-    icon: DescriptionRoundedIcon,
-    content: () => ResumePage
+    display: "Experience",
+    route: "/experience",
+    icon: WorkRoundedIcon,
+    content: () => ExperiencePage
+  },
+  {
+    display: "Skills",
+    route: "/skills",
+    icon: BuildRoundedIcon,
+    content: () => SkillsPage
   },
   {
     display: "Projects",
     route: "/projects",
-    icon: ComputerRoundedIcon,
+    icon: SchoolRoundedIcon,
     content: () => ProjectPage
   }
 ];

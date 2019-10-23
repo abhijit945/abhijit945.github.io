@@ -79,7 +79,7 @@ const getGitHubUserData = query =>
       })
   );
 
-const parsePinnedRepos = data => {
+const parsePinnedRepositories = data => {
   if (
     !data ||
     !data[GRAPHQL_PROPS.OWNER] ||
@@ -108,6 +108,6 @@ const parseRepoLanguages = data => {
 export {
   graphQLQuery,
   getGitHubUserData,
-  parsePinnedRepos,
+  parsePinnedRepositories,
   parseRepoLanguages
 };

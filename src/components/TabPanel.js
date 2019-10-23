@@ -6,8 +6,7 @@ import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    margin: theme.spacing(2),
-    background: theme.palette.background.paper
+    margin: theme.spacing(2)
   }
 }));
 
@@ -20,8 +19,8 @@ export default function TabPanel(props) {
       component="div"
       role="tabpanel"
       hidden={value !== index}
-      id={`vertical-tabpanel-${index}`}
-      aria-labelledby={`vertical-tab-${index}`}
+      id={`horizontal-tabpanel-${index}`}
+      aria-labelledby={`horizontal-tab-${index}`}
       {...other}
     >
       <Box p={3}>{children}</Box>
@@ -37,7 +36,7 @@ TabPanel.propTypes = {
 
 export const a11yProps = index => {
   return {
-    id: `vertical-tab-${index}`,
-    "aria-controls": `vertical-tabpanel-${index}`
+    id: `horizontal-tab-${index}`,
+    "aria-controls": `horizontal-tabpanel-${index}`
   };
 };
