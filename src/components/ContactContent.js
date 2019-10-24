@@ -56,7 +56,7 @@ export default function ContactContent({
     <Box className={classes.root} p={1}>
       <MyAvatar />
       <Typography variant="h5" color="textPrimary" align="center">
-        Software engineer, fullstack developer, frontend developer
+        Software Engineer, Fullstack Developer, Frontend Developer
       </Typography>
       <Box p={2} className={classes.headerContactRoot}>
         {getAvatarList().map(m => (
