@@ -8,7 +8,6 @@ import IconButton from "@material-ui/core/IconButton";
 import Avatar from "@material-ui/core/Avatar";
 import ColorLensRoundedIcon from "@material-ui/icons/ColorLensRounded";
 import Brightness6RoundedIcon from "@material-ui/icons/Brightness6Rounded";
-import Paper from "@material-ui/core/Paper";
 import MyAvatar from "./Avatar";
 import getTheme, {
   generateNewRandomTheme,
@@ -54,7 +53,7 @@ export default function ContactContent({
   }
 
   return (
-    <Paper className={classes.root} p={1}>
+    <Box className={classes.root} p={1}>
       <MyAvatar />
       <Typography variant="h5" color="textPrimary" align="center">
         Software engineer, fullstack developer, frontend developer
@@ -100,7 +99,7 @@ export default function ContactContent({
           </Tooltip>
         </Avatar>
       </Box>
-    </Paper>
+    </Box>
   );
 }
 

@@ -7,7 +7,7 @@ import AccomplishmentsDoc from "../components/docs/Accomplishments.md";
 
 export default function ExperiencePage() {
   useEffect(() => {
-    document.title = "Abhijit Rao - Experience";
+    document.title = "Abhijit Rao \u2022 Experience";
   });
   return (
     <Box>

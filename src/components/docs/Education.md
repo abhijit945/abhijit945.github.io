@@ -1,4 +1,17 @@
-| University                        | Degree                     | Graduated |
-| --------------------------------- | -------------------------- | --------- |
-| The University of Texas at Dallas | M.S in Computer Science    | May 2014  |
-| Amrita Institute of Technology    | B.Tech in Computer Science | May 2010  |
+#### Master Of Science
+
+Computer Science
+
+University of Texas at Dallas
+
+2012 – 2014
+
+---
+
+#### Bachelor Of Technology
+
+Computer Science
+
+Amrita School of Engineering
+
+2006 – 2010

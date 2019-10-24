@@ -47,10 +47,10 @@ export default function TabComponent() {
             <AppBar position="sticky" key="appbar" className={classes.root}>
               <Tabs
                 value={location.pathname}
-                centered
                 indicatorColor="secondary"
                 textColor="inherit"
                 aria-label="Site options lists"
+                centered
               >
                 {getContents().map((t, i) => (
                   <Tab

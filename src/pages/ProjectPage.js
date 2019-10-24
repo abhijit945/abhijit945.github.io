@@ -93,7 +93,7 @@ Languages.propTypes = {
 export default function ProjectPage() {
   const classes = useStyles();
   useEffect(() => {
-    document.title = "Abhijit Rao - Projects";
+    document.title = "Abhijit Rao \u2022 Projects";
   });
   const [isLoading, setIsLoading] = React.useState(true);
   const [isHidden, setIsHidden] = useState(true);
