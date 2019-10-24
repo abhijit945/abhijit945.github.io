@@ -3,7 +3,6 @@ import { HashRouter, Route, Link, Switch } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import Box from "@material-ui/core/Box";
 import AppBar from "@material-ui/core/AppBar";
 import TabPanel, { a11yProps } from "./TabPanel";
 import getContents from "../helpers/contentList";
@@ -47,10 +46,10 @@ export default function TabComponent() {
             <AppBar position="sticky" key="appbar" className={classes.root}>
               <Tabs
                 value={location.pathname}
+                centered
                 indicatorColor="secondary"
                 textColor="inherit"
                 aria-label="Site options lists"
-                centered
               >
                 {getContents().map((t, i) => (
                   <Tab
@@ -60,12 +59,8 @@ export default function TabComponent() {
                     className={classes.tab}
                     key={t.display}
                     wrapped
-                    label={
-                      <Box className={classes.tabLabel}>
-                        <t.icon viewBox="0 0 24 24" />
-                        <Box className={classes.tabDisplay}>{t.display}</Box>
-                      </Box>
-                    }
+                    icon={<t.icon />}
+                    label={t.display}
                     {...a11yProps(i)}
                   />
                 ))}

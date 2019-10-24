@@ -88,7 +88,8 @@ QontoStepIcon.propTypes = {
 
 const useStyles = makeStyles({
   root: {
-    padding: 0
+    padding: 0,
+    flexWrap: "wrap"
   }
 });
 
