@@ -7,9 +7,7 @@ import HighlightsDoc from "./docs/Highlights.md";
 const useStyles = makeStyles(theme => ({
   footerRoot: {
     display: "flex",
-    position: "absolute",
-    color: theme.palette.text.secondary,
-    bottom: 0
+    color: theme.palette.text.secondary
   }
 }));
 
