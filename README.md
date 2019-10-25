@@ -22,7 +22,7 @@ My personal portfolio website hosted on Github Pages.
 
    - [x] Make headers sticky
    - [x] Add Contents to Resume
-   - [ ] Add Contents to Skills - Use `Sliders`
+   - [x] Add Contents to Skills - Use `Sliders`
 
 4. Projects
 

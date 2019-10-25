@@ -36,7 +36,7 @@ query {
           }
         }
       }
-      repositories(first: 100, isFork: false, orderBy: {field: CREATED_AT, direction: DESC}) {
+      repositories(first: 100, isFork: false, privacy:PUBLIC, orderBy: {field: CREATED_AT, direction: DESC}) {
         edges {
           node {
             name
