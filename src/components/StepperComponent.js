@@ -1,13 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
-import Stepper from "@material-ui/core/Stepper";
-import Step from "@material-ui/core/Step";
-import StepLabel from "@material-ui/core/StepLabel";
-import Check from "@material-ui/icons/Check";
-import StepConnector from "@material-ui/core/StepConnector";
 import Box from "@material-ui/core/Box";
+import Step from "@material-ui/core/Step";
+import StepConnector from "@material-ui/core/StepConnector";
+import StepLabel from "@material-ui/core/StepLabel";
+import Stepper from "@material-ui/core/Stepper";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
+import Check from "@material-ui/icons/Check";
+import clsx from "clsx";
+import PropTypes from "prop-types";
+import React from "react";
 
 const QontoConnector = withStyles(theme => ({
   alternativeLabel: {

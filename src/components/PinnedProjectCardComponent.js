@@ -1,12 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { makeStyles } from "@material-ui/core/styles";
+import Box from "@material-ui/core/Box";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
 import Chip from "@material-ui/core/Chip";
-import Box from "@material-ui/core/Box";
+import Link from "@material-ui/core/Link";
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import PropTypes from "prop-types";
+import React from "react";
 
 const useStyles = makeStyles(theme => ({
   card: {

@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
 import Box from "@material-ui/core/Box";
-import Fade from "@material-ui/core/Fade";
-import CircularProgress from "@material-ui/core/CircularProgress";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardHeader from "@material-ui/core/CardHeader";
+import CircularProgress from "@material-ui/core/CircularProgress";
 import Container from "@material-ui/core/Container";
+import Fade from "@material-ui/core/Fade";
 import { makeStyles } from "@material-ui/core/styles";
+import PropTypes from "prop-types";
+import React, { useEffect, useState } from "react";
+import PinnedProjectCardComponent from "../components/PinnedProjectCardComponent";
+import ProjectLanguagesCardComponent from "../components/ProjectLanguagesCardComponent";
 import {
   getGitHubUserData,
   graphQLQuery,
   parsePinnedRepositories,
   parseRepoLanguages
 } from "../helpers/graphQLHelper";
-import PinnedProjectCardComponent from "../components/PinnedProjectCardComponent";
-import ProjectLanguagesCardComponent from "../components/ProjectLanguagesCardComponent";
 
 const useStyles = makeStyles(theme => ({
   root: {

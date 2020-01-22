@@ -1,11 +1,11 @@
-import React from "react";
-import { HashRouter, Route, Link, Switch } from "react-router-dom";
-import { makeStyles } from "@material-ui/core/styles";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
 import AppBar from "@material-ui/core/AppBar";
-import TabPanel, { a11yProps } from "./TabPanel";
+import { makeStyles } from "@material-ui/core/styles";
+import Tab from "@material-ui/core/Tab";
+import Tabs from "@material-ui/core/Tabs";
+import React from "react";
+import { HashRouter, Link, Route, Switch } from "react-router-dom";
 import getContents from "../helpers/contentList";
+import TabPanel, { a11yProps } from "./TabPanel";
 
 const getIndex = (location, routeList) => {
   if (!location) {
@@ -20,8 +20,8 @@ const useStyles = makeStyles(theme => ({
     maxWidth: "100vw"
   },
   tab: {
-    paddingTop: theme.spacing(2),
-    paddingBottom: theme.spacing(2)
+    paddingTop: theme.spacing(1),
+    paddingBottom: theme.spacing(1)
   },
   tabLabel: {
     display: "flex",

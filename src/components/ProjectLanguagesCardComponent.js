@@ -1,11 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
 import Chip from "@material-ui/core/Chip";
-import Avatar from "@material-ui/core/Avatar";
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import StarsRoundedIcon from "@material-ui/icons/StarsRounded";
+import PropTypes from "prop-types";
+import React from "react";
 
 const useStyles = makeStyles(theme => ({
   avatar: {
@@ -38,10 +38,10 @@ export default function ProjectLanguagesCardComponent(props) {
               className={classes.chipRoot}
               key={l.name}
               color="secondary"
-              avatar={
-                <Avatar
+              icon={
+                <StarsRoundedIcon
                   className={classes.avatar}
-                  style={{ background: l.color }}
+                  style={{ fill: l.color }}
                 />
               }
               component="div"

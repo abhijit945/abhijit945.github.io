@@ -1,13 +1,13 @@
-import { createMuiTheme } from "@material-ui/core/styles";
 import {
-  blue,
   amber,
+  blue,
   deepPurple,
-  indigo,
   grey,
+  indigo,
   teal,
   yellow
 } from "@material-ui/core/colors";
+import { createMuiTheme } from "@material-ui/core/styles";
 
 const fontTypography = {
   fontFamily: [

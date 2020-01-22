@@ -1,11 +1,11 @@
+import BuildRoundedIcon from "@material-ui/icons/BuildRounded";
 import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
 import SchoolRoundedIcon from "@material-ui/icons/SchoolRounded";
 import WorkRoundedIcon from "@material-ui/icons/WorkRounded";
-import BuildRoundedIcon from "@material-ui/icons/BuildRounded";
-import HomePage from "../pages/HomePage";
-import SkillsPage from "../pages/SkillsPage";
-import ProjectPage from "../pages/ProjectPage";
 import ExperiencePage from "../pages/ExperiencePage";
+import HomePage from "../pages/HomePage";
+import ProjectPage from "../pages/ProjectPage";
+import SkillsPage from "../pages/SkillsPage";
 
 const getContents = () => [
   {

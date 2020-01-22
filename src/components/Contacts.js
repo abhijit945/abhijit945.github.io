@@ -1,9 +1,9 @@
-import React from "react";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+import Avatar from "@material-ui/core/Avatar";
 import Box from "@material-ui/core/Box";
 import Chip from "@material-ui/core/Chip";
-import Avatar from "@material-ui/core/Avatar";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import React from "react";
 import getAvatarList from "../helpers/avatarList";
 
 const useStyles = makeStyles(theme => ({

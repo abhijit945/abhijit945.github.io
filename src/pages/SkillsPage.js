@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardHeader from "@material-ui/core/CardHeader";
 import { makeStyles } from "@material-ui/core/styles";
-import SKILLS from "../helpers/skillsHelper";
+import React, { useEffect } from "react";
 import SkillStepper from "../components/StepperComponent";
+import SKILLS from "../helpers/skillsHelper";
 
 const useStyles = makeStyles(theme => ({
   root: {

@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
 import Box from "@material-ui/core/Box";
-import MarkdownComponent from "../components/MarkdownComponent";
-import ExperienceDoc from "../components/docs/Experience.md";
+import React, { useEffect } from "react";
 import EducationDoc from "../components/docs/Education.md";
-import AccomplishmentsDoc from "../components/docs/Accomplishments.md";
+import ExperienceDoc from "../components/docs/Experience.md";
+import MarkdownComponent from "../components/MarkdownComponent";
 
 export default function ExperiencePage() {
   useEffect(() => {
@@ -13,10 +12,6 @@ export default function ExperiencePage() {
     <Box>
       <MarkdownComponent title="Experience" markdownContent={ExperienceDoc} />
       <MarkdownComponent title="Education" markdownContent={EducationDoc} />
-      <MarkdownComponent
-        title="Accomplishments"
-        markdownContent={AccomplishmentsDoc}
-      />
     </Box>
   );
 }

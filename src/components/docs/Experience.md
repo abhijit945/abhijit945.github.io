@@ -1,4 +1,4 @@
-#### Senior Software Engineer, Cerner Corporation, Kansas City, MO *June 2014 – Present*
+#### Senior Software Engineer, Cerner Corporation, Kansas City, MO _June 2014 – Present_
 
 - Developed components and services for a web-based platform (_MPages_) using `ES6` `JavaScript`, `Less` `CSS`, `Webpack`, `ESLint` and `NodeJS`.
 - Contributed to React-like responsive framework, Fusion using `mithril.js`.
@@ -11,7 +11,7 @@
   test and deploy the site.
 - Mentored new associates on solutions within _Cerner_ and on JS projects. Coaching and teaching less experienced team members.
 
-#### Intern, TradeStation Technologies, Dallas, TX *May 2013 – May 2014*
+#### Intern, TradeStation Technologies, Dallas, TX _May 2013 – May 2014_
 
 - Worked on core products and services of WebTrading, a multi-million-dollar product for
   ordering/placing stocks and configuring portfolios. This was a Real-Time single page JS
@@ -19,7 +19,7 @@
 - Developed a feedback system within WebTrading application for gathering information from customers.
 - Developed a system for gathering analytics and usage data for tracking the amount of orders placed and collated information into `NewRelic` and `MixPanel` Analytics platform. Used API within both NewRelic and MixPanel to publish usage.
 
-#### Programmer Analyst, Cognizant Technology Solutions Pvt. Ltd, India *July 2010 – May 2012*
+#### Programmer Analyst, Cognizant Technology Solutions Pvt. Ltd, India _July 2010 – May 2012_
 
 _Development of Java based projects for Clients such as Huawei and Intuit_
 

@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import React, { useEffect } from "react";
 import MarkdownComponent from "../components/MarkdownComponent";
 import AboutDoc from "./docs/About.md";
 import HighlightsDoc from "./docs/Highlights.md";

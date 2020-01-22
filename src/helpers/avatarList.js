@@ -1,7 +1,7 @@
-import React from "react";
-import Tooltip from "@material-ui/core/Tooltip";
 import IconButton from "@material-ui/core/IconButton";
+import Tooltip from "@material-ui/core/Tooltip";
 import EmailRoundedIcon from "@material-ui/icons/EmailRounded";
+import React from "react";
 import GitHubIcon from "../components/GitHubIcon";
 import LinkedInIcon from "../components/LinkedInIcon";
 

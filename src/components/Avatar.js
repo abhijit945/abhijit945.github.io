@@ -1,13 +1,13 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
+import { makeStyles } from "@material-ui/core/styles";
+import React from "react";
 
 const useStyles = makeStyles(theme => ({
   avatar: {
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
-    width: 128,
-    height: 128
+    width: 96,
+    height: 96
   }
 }));
 

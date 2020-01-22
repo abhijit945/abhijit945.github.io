@@ -1,19 +1,20 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
-import Tooltip from "@material-ui/core/Tooltip";
-import IconButton from "@material-ui/core/IconButton";
 import Avatar from "@material-ui/core/Avatar";
+import Box from "@material-ui/core/Box";
+import IconButton from "@material-ui/core/IconButton";
+import { makeStyles } from "@material-ui/core/styles";
+import Tooltip from "@material-ui/core/Tooltip";
+import Typography from "@material-ui/core/Typography";
+import Brightness4RoundedIcon from "@material-ui/icons/Brightness4Rounded";
+import Brightness7RoundedIcon from "@material-ui/icons/Brightness7Rounded";
 import ColorLensRoundedIcon from "@material-ui/icons/ColorLensRounded";
-import Brightness6RoundedIcon from "@material-ui/icons/Brightness6Rounded";
-import MyAvatar from "./Avatar";
+import PropTypes from "prop-types";
+import React, { useState } from "react";
+import getAvatarList from "../helpers/avatarList";
 import getTheme, {
   generateNewRandomTheme,
   toggleMode
 } from "../helpers/themeHelper";
-import getAvatarList from "../helpers/avatarList";
+import MyAvatar from "./Avatar";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -41,7 +42,7 @@ export default function ContactContent({
   setCurrentMode
 }) {
   const classes = useStyles();
-
+  const [mode, setMode] = useState(currentMode);
   function handleThemeChange() {
     setCurrentTheme(generateNewRandomTheme("light"));
   }
@@ -50,6 +51,7 @@ export default function ContactContent({
     const toggledMode = toggleMode(currentMode);
     setCurrentMode(toggledMode);
     setCurrentTheme(getTheme(toggledMode));
+    setMode(toggledMode);
   }
 
   return (
@@ -92,9 +94,13 @@ export default function ContactContent({
           clickable="true"
           onClick={handleModeChange}
         >
-          <Tooltip title="Change mode">
+          <Tooltip title="Toggle light/dark theme">
             <IconButton color="inherit" aria-label="mode">
-              <Brightness6RoundedIcon />
+              {mode === "dark" ? (
+                <Brightness7RoundedIcon />
+              ) : (
+                <Brightness4RoundedIcon />
+              )}
             </IconButton>
           </Tooltip>
         </Avatar>
