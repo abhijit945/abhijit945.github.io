@@ -14,7 +14,7 @@ import getTheme, {
   generateNewRandomTheme,
   toggleMode
 } from "../helpers/themeHelper";
-import MyAvatar from "./Avatar";
+import MyAvatar from "./MyAvatar";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -31,8 +31,10 @@ const useStyles = makeStyles(theme => ({
   contactAvatar: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    color: theme.palette.primary.default,
-    backgroundColor: theme.palette.secondary.main
+    width: 32,
+    height: 32,
+    borderRadius: 4,
+    backgroundColor: theme.palette.primary.main
   }
 }));
 
@@ -57,18 +59,15 @@ export default function ContactContent({
   return (
     <Box className={classes.root} p={1}>
       <MyAvatar />
-      <Typography variant="h5" color="textPrimary" align="center">
-        Software Engineer, Fullstack Developer, Frontend Developer
-      </Typography>
-      <Box p={2} className={classes.headerContactRoot}>
+      <Box p={1} className={classes.headerContactRoot}>
         {getAvatarList().map(m => (
           <Avatar
             className={classes.contactAvatar}
             key={m.label}
-            color="secondary"
             component="a"
             clickable="true"
             target="_blank"
+            rel="noreferrer"
             href={m.link}
           >
             {m.icon}
@@ -77,7 +76,6 @@ export default function ContactContent({
         <Avatar
           className={classes.contactAvatar}
           key="mystery"
-          color="secondary"
           clickable="true"
           onClick={handleThemeChange}
         >
@@ -90,7 +88,6 @@ export default function ContactContent({
         <Avatar
           className={classes.contactAvatar}
           key="mode"
-          color="secondary"
           clickable="true"
           onClick={handleModeChange}
         >
@@ -105,6 +102,9 @@ export default function ContactContent({
           </Tooltip>
         </Avatar>
       </Box>
+      <Typography variant="h6" color="textPrimary" align="center">
+        Software Engineer, Fullstack Developer, Frontend Developer
+      </Typography>
     </Box>
   );
 }

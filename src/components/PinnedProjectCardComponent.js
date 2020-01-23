@@ -29,6 +29,7 @@ export default function PinnedProjectCardComponent(props) {
           to={url}
           href={url}
           target="_blank"
+          rel="noreferrer"
           color="primary"
           component="a"
         >

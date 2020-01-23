@@ -23,12 +23,6 @@ const useStyles = makeStyles(theme => ({
     paddingTop: theme.spacing(1),
     paddingBottom: theme.spacing(1)
   },
-  tabLabel: {
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center"
-  },
   tabDisplay: {
     paddingLeft: theme.spacing(1)
   }
@@ -43,12 +37,12 @@ export default function TabComponent() {
         path="/"
         render={({ location }) => (
           <>
-            <AppBar position="sticky" key="appbar" className={classes.root}>
+            <AppBar position="sticky" color="default" key="appbar" className={classes.root}>
               <Tabs
                 value={location.pathname}
                 centered
-                indicatorColor="secondary"
-                textColor="inherit"
+                textColor="primary"
+                indicatorColor="primary"
                 aria-label="Site options lists"
               >
                 {getContents().map((t, i) => (

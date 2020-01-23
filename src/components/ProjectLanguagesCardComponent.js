@@ -27,17 +27,16 @@ export default function ProjectLanguagesCardComponent(props) {
   return (
     <Card className={classes.card}>
       <CardContent>
-        <Typography variant="body1" color="textSecondary" gutterBottom>
+        <Typography variant="h5" color="primary" gutterBottom>
           {name}
         </Typography>
         <>
           {lang.map(l => (
             <Chip
-              size="small"
-              variant="outlined"
               className={classes.chipRoot}
+              size="small"
+              color="primary"
               key={l.name}
-              color="secondary"
               icon={
                 <StarsRoundedIcon
                   className={classes.avatar}
