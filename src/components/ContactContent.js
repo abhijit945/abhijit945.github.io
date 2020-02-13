@@ -45,6 +45,7 @@ export default function ContactContent({
 }) {
   const classes = useStyles();
   const [mode, setMode] = useState(currentMode);
+
   function handleThemeChange() {
     setCurrentTheme(generateNewRandomTheme("light"));
   }

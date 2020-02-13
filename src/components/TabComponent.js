@@ -37,7 +37,12 @@ export default function TabComponent() {
         path="/"
         render={({ location }) => (
           <>
-            <AppBar position="sticky" color="default" key="appbar" className={classes.root}>
+            <AppBar
+              position="sticky"
+              color="default"
+              key="appbar"
+              className={classes.root}
+            >
               <Tabs
                 value={location.pathname}
                 centered

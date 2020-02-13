@@ -25,7 +25,7 @@ const getTheme = mode =>
   createMuiTheme({
     palette: {
       primary: {
-        main: "#1769aa"
+        main: "#008fe0"
       },
       type: mode
     },
