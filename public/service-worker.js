@@ -1,7 +1,13 @@
 /* eslint-disable func-names */
 /* eslint-disable no-restricted-globals */
 const cacheName = "try-pwa-standalone";
-const filesToCache = ["/", "/public", "/index.html", "/dist/bundle.js"];
+const filesToCache = [
+  "/",
+  "/index.html",
+  "/public/service-worker.js",
+  "/public/manifest.json",
+  "/dist/bundle.js"
+];
 
 /* Start the service worker and cache all of the app's content */
 self.addEventListener("install", function(e) {
