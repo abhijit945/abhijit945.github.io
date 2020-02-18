@@ -29,7 +29,6 @@
     }
   ],
   "start_url": ".",
-  "scope": "https://abhijit945.github.io/",
   "display": "standalone",
   "theme_color": "#008fe0",
   "background_color": "#ffffff"

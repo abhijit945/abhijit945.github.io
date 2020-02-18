@@ -1,11 +1,12 @@
 /* eslint-disable func-names */
 /* eslint-disable no-restricted-globals */
-const cacheName = "try-pwa-standalone";
+const cacheName = "abhijit945-github-io";
 const filesToCache = [
   "/",
   "/index.html",
-  "/public/service-worker.js",
+  "/service-worker.js",
   "/public/manifest.json",
+  "/public/favicon.ico",
   "/dist/bundle.js"
 ];
 
