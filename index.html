@@ -19,7 +19,7 @@
       sizes="16x16"
       href="public/favicon-16x16.png"
     />
-    <link rel="manifest" href="public/site.webmanifest" />
+    <link rel="manifest" href="public/manifest.json" />
     <link href="index.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#008fe0" />
@@ -27,5 +27,19 @@
   <body>
     <main id="root"></main>
     <script src="./dist/bundle.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./public/service-worker.js").then(
+          function(registration) {
+            console.log("Service worker registration succeeded:", registration);
+          },
+          function(error) {
+            console.log("Service worker registration failed:", error);
+          }
+        );
+      } else {
+        console.log("Service workers are not supported.");
+      }
+    </script>
   </body>
 </html>
